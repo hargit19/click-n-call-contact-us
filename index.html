@@ -130,6 +130,32 @@ header {
     stroke: currentColor;
 }
 
+.section-label {
+    display:block;
+    width: fit-content;
+    margin-left: 185px;
+    background-color: rgba(66, 133, 244, 0.1);
+    color: var(--primary);
+    padding: 4px 12px;
+    border-radius: 9999px;
+    font-size: 14px;
+    font-weight: 500;
+    margin-bottom: 14px;
+}
+
+.section-label-contact-us{
+    display:block;
+    width: fit-content;
+    margin-left: 165px;
+    background-color: rgba(66, 133, 244, 0.1);
+    color: var(--primary);
+    padding: 4px 12px;
+    border-radius: 9999px;
+    font-size: 14px;
+    font-weight: 500;
+    margin-block: 10px
+}
+
 nav ul {
     display: flex;
     list-style: none;
@@ -151,7 +177,7 @@ nav a:hover {
 }
 
 .click-call-container {
-  max-width: 400px;
+  max-width: 800px;
   text-align: center;
   padding: 30px 20px;
   color: #000;
@@ -163,11 +189,20 @@ nav a:hover {
   margin-bottom: 15px;
 }
 
-.click-call-intro,
-.click-call-question,
-.click-call-contact-instruction {
-  font-size: 14px;
+.click-call-intro
+ {
+  font-size: 1.5rem;
   margin-bottom: 10px;
+  font-weight: 500;
+}
+
+.click-call-contact-instruction{
+    font-size: 1.15rem;
+}
+
+.click-call-question{
+    font-size: 1rem;
+    margin-bottom: 0.75rem;
 }
 
 .click-call-icon {
@@ -186,13 +221,13 @@ nav a:hover {
   text-align: left;
   margin: 0 auto 20px;
   display: inline-block;
-  font-size: 15px;
+  font-size: 1.25rem;
+  font-weight: 400;
 }
 
 .click-call-price-item {
   display: flex;
   justify-content: space-between;
-  margin-bottom: 5px;
 }
 
 .click-call-dot {
@@ -212,6 +247,8 @@ nav a:hover {
 .click-call-contact-details {
   font-size: 14px;
   line-height: 1.4;
+  font-weight: 400;
+  margin-top: 10px;
 }
 
 .click-call-email {
@@ -220,10 +257,9 @@ nav a:hover {
 }
 
 
-
 .footer {
-    background-color: var(--background-light);
-    padding: 80px 0 10px;
+    background-color: rgba(66, 133, 244, 0.1);
+    padding: 60px 0 10px;
 }
 
 .footer-content {
@@ -233,22 +269,21 @@ nav a:hover {
 }
 
 .footer-brand {
-    max-width: 300px;
+    max-width: 400px;
 }
 
 .footer-logo {
     font-size: 24px;
     font-weight: 700;
     color: var(--primary-color);
-    display: flex;
+    
     align-items: center;
     gap: 8px;
     margin-bottom: 15px;
 }
 
 .footer-logo svg {
-    width: 20px;
-    height: 20px;
+    height: 15px;
 }
 
 .footer-brand p {
@@ -306,6 +341,7 @@ nav a:hover {
 }
 
 
+
 </style>
 </head>
 <body>
@@ -339,14 +375,15 @@ nav a:hover {
 
    <div class="click-call-container-top">
    <div class="click-call-container">
-    <h1 class="click-call-title">Click & Call</h1>
+    <!-- <h1 class="click-call-title">Click & Call</h1> -->
+     <img src="logo2.png" style="height: 60px;">
 
     <p class="click-call-intro">
       Thank you for trying out the free Click<br />and Call demo.
     </p>
 
     <!-- <img src="images/click-call-icon.png" alt="Click to Call Icon" class="click-call-icon" /> -->
-     <div style="display: flex; margin-left:60px">
+     <div style="display: flex; margin-left:125px; margin-bottom: 10px">
      <img src="left.png" style="height: 50px ;">
      <img src="center.png" style="height: 50px ;">
      <img src="right.jpg" style="height: 50px;" >
@@ -357,7 +394,8 @@ nav a:hover {
       Service prices are listed below.
     </p>
 
-    <p class="click-call-price-label">Price</p>
+    
+     <div class="section-label">Price</div>
 
     <div class="click-call-pricing">
       <p class="click-call-price-item">
@@ -371,7 +409,7 @@ nav a:hover {
     </div>
 
 
-    <h2 class="click-call-contact-heading">Contact Us</h2>
+   <div class="section-label-contact-us">Contact Us</div>
 
     <p class="click-call-contact-instruction">
       If you have scheduled a business<br />
@@ -392,11 +430,11 @@ nav a:hover {
 
 
 
-    <footer class="footer">
+     <footer class="footer">
         <div class="container">
             <div class="footer-content">
                 <div class="footer-brand">
-                    <img src="logo2.png" style="height: 80px; width:300px">
+                    <img src="logo2.png" style="height: 80px; width:350px; align-self:last baseline">
                     <p>AI powered solutions for automation and growth</p>
                     <button class="btn-primary btn-sm">
                         Try for Free
@@ -405,13 +443,13 @@ nav a:hover {
                 </div>
 
                 <div class="clients-info">
-      <div class="clients-role">Development</div>
+      <div class="clients-role" style="font-weight: 600;">Development</div>
       <div class="clients-company">Devnagri AI (India) <a href="https://devnagri.com/" target="_blank">https://devnagri.com/</a></div>
-      <div class="clients-role">Marketing Sales</div>
+      <div class="clients-role" style="font-weight: 600;">Marketing Sales</div>
       <div class="clients-company">Aiberry LLC (Japan) <a href="https://aiberry.co.jp/" target="_blank">https://aiberry.co.jp/</a></div>
     </div>
                 
-                <div class="footer-links">
+                <!-- <div class="footer-links">
                     <div class="footer-column">
                         <h4>Quick links</h4>
                         <ul>
@@ -432,18 +470,9 @@ nav a:hover {
                         </ul>
                     </div>
                     
-                </div>
+                </div> -->
             </div>
             
-            <div class="footer-bottom">
-                <p>&copy; 2025 Neurova. All rights reserved.</p>
-                <div class="footer-social">
-                    <a href="#"><i data-lucide="instagram"></i></a>
-                    <a href="#"><i data-lucide="twitter"></i></a>
-                    <a href="#"><i data-lucide="facebook"></i></a>
-                    <a href="#"><i data-lucide="linkedin"></i></a>
-                </div>
-            </div>
         </div>
     </footer>
 
